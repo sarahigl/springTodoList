@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="/css/main.css" rel="stylesheet"/>
+</head>
+<body>
+    <div class="sectionListe">
+       <h1 class="titre">Tasks List</h1>
+        <ul>
+            <li th:each="task : ${tasks}" class="liste">
+                <span th:text="${task.title}"></span>: <span th:text="${task.description}"></span>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,5 +1,6 @@
 package com.springtodo.springtodo.model;
 
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -14,6 +15,7 @@ public class Category {
     private Long id;
 
     private String label;
+
 
     public Long getId() {
         return this.id;

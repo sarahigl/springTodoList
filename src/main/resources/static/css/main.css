@@ -1,0 +1,14 @@
+body{
+    background-color: antiquewhite;
+}
+.sectionListe{
+    display: flex;
+    flex-direction: column;
+}
+.liste{
+    background-color: pink;
+    width: 300px;
+    height: 200px;
+    border-radius: 20px;
+
+}

@@ -2,7 +2,6 @@ package com.springtodo.springtodo.controller;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Stream;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,7 +10,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.springtodo.springtodo.dto.userDto;
 import com.springtodo.springtodo.model.User1;
 import com.springtodo.springtodo.service.UserService;
 
@@ -22,7 +20,7 @@ public class UserController1 {
 
     @GetMapping("/users")
     public List<User1> getUsers() {
-        return userService.getAllUsers();
+        return userService.getAllUsers(); 
     }
     @PostMapping("/addUsers")
     public void addUser(@RequestBody User1 user1) {
@@ -33,9 +31,9 @@ public class UserController1 {
     public Optional<User1> findById(@PathVariable Long id) {
         return userService.findById(id);
     }
-    @GetMapping("/userdto/{id}")
-    public Stream<userDto>getUserdto(@PathVariable Long id) {
+    /* @GetMapping("/userdto/{id}")
+    public Stream<DtoUser>getUserdto(@PathVariable Long id) {
         return userService.getUserDTO(id);
     }
-
+ */
 }

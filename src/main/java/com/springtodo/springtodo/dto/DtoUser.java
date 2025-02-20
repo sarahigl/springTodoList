@@ -1,11 +1,10 @@
 package com.springtodo.springtodo.dto;
 
-
-public record userDto(
+public record DtoUser(
     String firstname,
     String lastname,
     String email
-    //List<Task1> task
-) {
+)
+ {
 
 }
