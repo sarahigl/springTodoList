@@ -1,5 +1,9 @@
 package com.springtodo.springtodo.model;
 
+import java.util.List;
+
+import org.springframework.scheduling.config.Task;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -18,6 +22,7 @@ public class User1 {
     private String firstname;
     private String email;
     private String password;
+    
     @ManyToOne
     @JoinColumn(name = "role_id")
     private Role role;

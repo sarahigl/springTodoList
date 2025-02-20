@@ -3,10 +3,12 @@ package com.springtodo.springtodo.service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Stream;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.springtodo.springtodo.dto.userDto;
 import com.springtodo.springtodo.model.User1;
 import com.springtodo.springtodo.repository.UserRepository1;
 
@@ -27,5 +29,9 @@ public class UserService {
     }
     public Optional<User1> findById(Long id){
         return userRepository1.findById(id);
+    }
+    public Stream<userDto> getUserDTO(Long id){
+        return userRepository1.findById(id).stream()
+                .map(UserDtoWrapper::toDto);
     }
 }
