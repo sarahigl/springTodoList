@@ -21,15 +21,14 @@ public class User1 {
     private String email;
     private String password;
 
-    @ManyToOne
-    @JoinColumn(name = "role_id")
-    private Role role;
-   // public List<DtoTask> getTasks;
-   
-
+    
     public User1(){
 
     }
+
+    @ManyToOne
+    @JoinColumn(name = "role_id")
+    private Role role;
 
     public Role getRole() {
         return this.role;
@@ -101,4 +100,6 @@ public class User1 {
             ", role='" + getRole() + "'" +
             "}";
     }
+
+    
 }
